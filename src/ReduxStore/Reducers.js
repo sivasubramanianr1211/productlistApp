@@ -9,19 +9,19 @@ const initialState = {
 const Reducers = (state=initialState,action) =>{
     switch(action.type){
         case "PRODUCT_LIST_VALUE": return {
-            ... state,
+            ...state,
             productsList: action.payload
         }
         case "SET_SELECTED_PRODUCT": return {
-            ... state,
+            ...state,
             getSelectedProduct: action.payload
         }
         case "ADD_TO_CART_COUNT": return {
-            ... state,
+            ...state,
             addToCartCountValue: action.payload
         }
         case "ADDED_PRODUCT_TO_CART": return {
-            ... state,
+            ...state,
             addedProductToCartValue: action.payload
         }
         default:
