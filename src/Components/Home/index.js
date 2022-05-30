@@ -1,12 +1,11 @@
+//Home - this function is used for rendring all the products
+
 import React from "react";
 import ProductItem from "../ProductItem";
 import { productListsValue } from '../../ReduxStore/Actions'
 import { connect } from "react-redux";
 import { productListAPI } from "../../Utility/BackendApi";
 import axios from 'axios';
-
-
-// import withContext from "../withContext";
 
 class Home extends React.Component {
   constructor(props) {

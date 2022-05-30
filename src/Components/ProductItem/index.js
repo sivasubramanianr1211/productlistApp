@@ -12,7 +12,15 @@ class ProductItem extends React.Component {
   }
   addToCart(product) {
     this.props.addToCartCount(this.props.addToCartCountValue + 1)
-    this.props.addedProductToCart(this.props.addedProductToCartValue.push(product))
+    console.log(this.props.addedProductToCartValue)
+    if(this.props.addedProductToCartValue.includes(product)){
+      product["count"] = product["count"] + 1;
+      this.props.addedProductToCart(this.props.addedProductToCartValue.push(product))
+    }else{
+      product["count"] = 1;
+      this.props.addedProductToCart(this.props.addedProductToCartValue.push(product))
+    }
+    
   }
 
   redirectToDetailsPage(product) {
